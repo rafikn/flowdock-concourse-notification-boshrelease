@@ -1,0 +1,5 @@
+---
+name: flowdock-notification-resource
+dependencies: []
+files:
+- flowdock-notification-resource/rootfs.tar
