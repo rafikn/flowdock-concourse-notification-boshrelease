@@ -1,0 +1,60 @@
+---
+jobs:
+- name: embed
+  public: true
+  plan:
+  - aggregate:
+    - get: boshrelease
+      trigger: false
+    - get: resource-image
+      passed: [resource-image]
+      params: {rootfs: true}
+      trigger: false
+  - task: embed-image-blob
+    config:
+      platform: linux
+      image: docker:///concourse/concourse-ci
+      inputs:
+      - {name: boshrelease, path: .}
+      - {name: resource-image}
+      run:
+        path: ./src/ci/scripts/embed_image_blob.sh
+        args: [resource-image, flowdock-concourse-notification-resource]
+      params:
+        access_key_id: {{aws-access-key-id}}
+        secret_access_key: {{aws-secret-access-key}}
+  - put: boshrelease
+    params:
+      repository: embed-image-blob
+      rebase: true
+
+- name: resource-image
+  public: true
+  plan:
+  - get: flowdock-concourse-notification-resource
+    trigger: true
+  - put: resource-image
+    params:
+      build: flowdock-concourse-notification-resource
+
+resources:
+- name: flowdock-concourse-notification-resource
+  type: git
+  source:
+    uri: https://github.com/starkandwayne/flowdock-concourse-notification-resource.git
+    branch: master
+
+- name: boshrelease
+  type: git
+  source:
+    uri: git@github.com:starkandwayne/flowdock-concourse-notification-boshrelease.git
+    branch: master
+    private_key: {{github-private-key}}
+
+- name: resource-image
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: fearoffish/flowdock-concourse-notification-resource

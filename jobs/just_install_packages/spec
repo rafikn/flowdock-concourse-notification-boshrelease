@@ -1,0 +1,6 @@
+---
+name: just_install_packages
+packages: [flowdock-notification-resource]
+templates:
+  ignoreme: ignoreme
+properties: {}
