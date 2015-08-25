@@ -1,5 +1,5 @@
 ---
-name: flowdock-notification-resource
+name: flowdock-concourse-notification-resource
 dependencies: []
 files:
 - flowdock-concourse-notification-resource/rootfs.tar

@@ -1,6 +1,6 @@
 ---
 name: just_install_packages
-packages: [flowdock-notification-resource]
+packages: [flowdock-concourse-notification-resource]
 templates:
   ignoreme: ignoreme
 properties: {}

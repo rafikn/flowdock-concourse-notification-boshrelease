@@ -10,5 +10,5 @@ meta:
 director_uuid: PLACEHOLDER-DIRECTOR-UUID
 
 releases:
-  - name: flowdock-notification-resource
+  - name: flowdock-concourse-notification-resource
     version: latest

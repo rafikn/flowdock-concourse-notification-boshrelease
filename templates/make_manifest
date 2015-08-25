@@ -2,7 +2,7 @@
 
 set -e
 
-template_prefix="flowdock-notification-resource"
+template_prefix="flowdock-concourse-notification-resource"
 STEMCELL_OS=${STEMCELL_OS:-ubuntu}
 
 infrastructure=$1
