@@ -2,5 +2,5 @@
 blobstore:
   provider: s3
   options:
-    bucket_name: flowdock-concourse-notification-resource
+    bucket_name: flowdock-concourse-notification-resource-boshrelease
 final_name: flowdock-concourse-notification-resource
