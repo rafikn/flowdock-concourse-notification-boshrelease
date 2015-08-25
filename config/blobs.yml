@@ -1,6 +1,6 @@
 ---
 flowdock-concourse-notification-resource-boshrelease/rootfs.tar:
-  object_id: dc354f0a-43de-4a6e-826a-a74d3532abf7
+  object_id: 117162da-b42d-41e9-8708-1edc56b52e3b
   sha: !binary |-
-    NmU4MzM0YjdkOGQ3MDBkMjkxZGZiZDhlZDAyNDc3YzAwZDlmZDMyZg==
+    YmE0YWUxMjdjYTViOTdlNWNhZTJlYjA3YTk5ZDE3N2YzN2ExZmM0NQ==
   size: 157037056
