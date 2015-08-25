@@ -83,14 +83,14 @@ jobs:
         image: /var/vcap/packages/bosh_io_stemcell_resource
       - type: bosh-deployment
         image: /var/vcap/packages/bosh_deployment_resource
-      - type: slack-notification
+      - type: flowdock-notification
         image: /var/vcap/packages/flowdock-concourse-notification-resource
 ```
 
 Note that it is the latter two lines that are specific to this BOSH release:
 
 ```yaml
-- type: slack-notification
+- type: flowdock-notification
   image: /var/vcap/packages/flowdock-concourse-notification-resource
 ```
 
