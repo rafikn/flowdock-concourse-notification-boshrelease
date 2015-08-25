@@ -1,5 +1,0 @@
-#!/bin/bash
-
-set -e -x
-
-tar xf flowdock-notification-resource/rootfs.tar -C ${BOSH_INSTALL_TARGET}
