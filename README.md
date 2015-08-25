@@ -1,17 +1,17 @@
-BOSH Release for slack-notification-resource
-============================================
+BOSH Release for flowdock-concourse-notification-resource
+=========================================================
 
-Send messages to your [Slack](https://slack.com) channels from Concourse:
+Send messages to your [Flowdock](https://flowdock.com) channels from Concourse:
 
 ![example](http://cl.ly/image/1k44412g3i3E/slack_notification.png)
 
-This BOSH release packages @Nopik's [slack-notification-resource](https://github.com/Nopik/slack-notification-resource) for Concourse, to make it simple to include the additional Concourse resource in your BOSH deployed Concourse system.
+This BOSH release packages Stark and Wayne's [flowdock-concourse-notification-resource](https://github.com/starkandwayne/flowdock-concourse-notification-resource.git) for Concourse, to make it simple to include the additional Concourse resource in your BOSH deployed Concourse system.
 
-Final releases are automatically created based on any changes to the upstream slack-notification-resource
+Final releases are automatically created based on any changes to the upstream flowdock-concourse-notification-resource
 
-See the build pipeline http://ci.starkandwayne.com:8080/pipelines/slack-notification-resource-boshrelease for status.
+See the build pipeline http://ci.starkandwayne.com:8080/pipelines/flowdock-concourse-notification-resource-boshrelease for status.
 
-Final releases are available on https://bosh.io/releases as well as this project's own [GitHub releases](https://github.com/cloudfoundry-community/slack-notification-resource-boshrelease/releases).
+Final releases are available on https://bosh.io/releases as well as this project's own [GitHub releases](https://github.com/cloudfoundry-community/flowdock-concourse-notification-resource-boshrelease/releases).
 
 Installation
 ------------
@@ -19,12 +19,12 @@ Installation
 To use this bosh release, first upload it to the BOSH/bosh-lite that is running Concourse:
 
 ```
-bosh upload release https://bosh.io/d/github.com/cloudfoundry-community/slack-notification-resource-boshrelease
+bosh upload release https://bosh.io/d/github.com/cloudfoundry-community/flowdock-concourse-notification-resource-boshrelease
 ```
 
 Next, update your Concourse deployment manifest to add the resource.
 
-Add the `slack-notification-resource` release to the list:
+Add the `flowdock-concourse-notification-resource` release to the list:
 
 ```yaml
 releases:
@@ -32,21 +32,21 @@ releases:
     version: latest
   - name: garden-linux
     version: latest
-  - name: slack-notification-resource
+  - name: flowdock-concourse-notification-resource
     version: latest
 ```
 
-Into the `worker` job, add the `{release: slack-notification-resource, name: just_install_packages}` job template that will install the package:
+Into the `worker` job, add the `{release: flowdock-concourse-notification-resource, name: just_install_packages}` job template that will install the package:
 
 ```yaml
 jobs:
 - name: worker
   templates:
     ...
-    - {release: slack-notification-resource, name: just_install_packages}
+    - {release: flowdock-concourse-notification-resource, name: just_install_packages}
 ```
 
-The final change is to explicitly list all the resource types (they are implicit) and add the `slack-notification-resource` package to the list:
+The final change is to explicitly list all the resource types (they are implicit) and add the `flowdock-concourse-notification-resource` package to the list:
 
 ```yaml
 jobs:
@@ -84,14 +84,14 @@ jobs:
       - type: bosh-deployment
         image: /var/vcap/packages/bosh_deployment_resource
       - type: slack-notification
-        image: /var/vcap/packages/slack-notification-resource
+        image: /var/vcap/packages/flowdock-concourse-notification-resource
 ```
 
 Note that it is the latter two lines that are specific to this BOSH release:
 
 ```yaml
 - type: slack-notification
-  image: /var/vcap/packages/slack-notification-resource
+  image: /var/vcap/packages/flowdock-concourse-notification-resource
 ```
 
 The former lines should be obtained from the Concourse BOSH release, not the documentation above which might be out of date. Use https://github.com/concourse/concourse/blob/master/jobs/groundcrew/spec#L69-L96
@@ -135,5 +135,5 @@ Setup pipeline in Concourse
 ---------------------------
 
 ```
-fly -t snw c -c pipeline.yml --vars-from credentials.yml slack-notification-resource-boshrelease
+fly -t snw c -c pipeline.yml --vars-from credentials.yml flowdock-concourse-notification-resource-boshrelease
 ```
