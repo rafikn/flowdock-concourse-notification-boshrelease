@@ -19,7 +19,7 @@ jobs:
       - {name: resource-image}
       run:
         path: ./src/ci/scripts/embed_image_blob.sh
-        args: [resource-image, flowdock-concourse-notification-resource-boshrelease]
+        args: [resource-image, flowdock-concourse-notification-resource]
       params:
         access_key_id: {{aws-access-key-id}}
         secret_access_key: {{aws-secret-access-key}}
