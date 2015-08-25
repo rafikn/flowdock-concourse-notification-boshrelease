@@ -1,6 +1,6 @@
 ---
 flowdock-concourse-notification-resource/rootfs.tar:
-  object_id: a354f354-baa6-41f0-867e-eda3f9fc0c6d
+  object_id: 48a5d164-cbef-422d-b501-b6b652dd3225
   sha: !binary |-
-    OTA2NDZkNzc5ZTBhZDNlYjcwNmU0MDlhODE2YmEwYzlhZTM2MDg1ZA==
+    NmE3N2E3ZmQ3MGEyYjNhMGY5MDFiMjc0MTllN2VhMDNjN2FiYmQ3ZA==
   size: 157037568
