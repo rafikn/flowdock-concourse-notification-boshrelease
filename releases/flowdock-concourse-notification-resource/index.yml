@@ -2,4 +2,6 @@
 builds:
   96847f22-cb21-47a1-a020-0d07ac2ed2f6:
     version: '1'
+  431736c4-359e-46a3-9010-bfe95473a4c3:
+    version: '2'
 format-version: '2'
