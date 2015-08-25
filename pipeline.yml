@@ -9,7 +9,7 @@ jobs:
     - get: resource-image
       passed: [resource-image]
       params: {rootfs: true}
-      trigger: false
+      trigger: true
   - task: embed-image-blob
     config:
       platform: linux
@@ -19,7 +19,7 @@ jobs:
       - {name: resource-image}
       run:
         path: ./src/ci/scripts/embed_image_blob.sh
-        args: [resource-image, flowdock-notification-resource]
+        args: [resource-image, flowdock-concourse-notification-resource]
       params:
         access_key_id: {{aws-access-key-id}}
         secret_access_key: {{aws-secret-access-key}}

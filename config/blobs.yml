@@ -1,1 +1,16 @@
---- {}
+---
+flowdock-concourse-notification-resource-boshrelease/rootfs.tar:
+  object_id: 117162da-b42d-41e9-8708-1edc56b52e3b
+  sha: !binary |-
+    YmE0YWUxMjdjYTViOTdlNWNhZTJlYjA3YTk5ZDE3N2YzN2ExZmM0NQ==
+  size: 157037056
+flowdock-concourse-notification-resource/rootfs.tar:
+  object_id: a354f354-baa6-41f0-867e-eda3f9fc0c6d
+  sha: !binary |-
+    OTA2NDZkNzc5ZTBhZDNlYjcwNmU0MDlhODE2YmEwYzlhZTM2MDg1ZA==
+  size: 157037568
+flowdock-notification-resource/rootfs.tar:
+  object_id: 131b84a6-c25e-4552-8ef3-6902ef54b2cd
+  sha: !binary |-
+    N2FmMWIxY2JhMTM0MTY4MDQ1N2EyYjM3ZjEyNjUxNjYzMWQzNWViNg==
+  size: 157037568
