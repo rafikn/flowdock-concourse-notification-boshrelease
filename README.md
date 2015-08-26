@@ -3,7 +3,7 @@ BOSH Release for flowdock-concourse-notification-resource
 
 Send messages to your [Flowdock](https://flowdock.com) channels from Concourse:
 
-![example](http://cl.ly/image/1k44412g3i3E/slack_notification.png)
+![example](http://cl.ly/image/3L0w1r2t2V1H/Concourse_Flowdock_Notification.png)
 
 This BOSH release packages Stark and Wayne's [flowdock-concourse-notification-resource](https://github.com/starkandwayne/flowdock-concourse-notification-resource.git) for Concourse, to make it simple to include the additional Concourse resource in your BOSH deployed Concourse system.
 
