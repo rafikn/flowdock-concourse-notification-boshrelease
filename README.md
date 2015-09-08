@@ -36,14 +36,14 @@ releases:
     version: latest
 ```
 
-Into the `worker` job, add the `{release: flowdock-concourse-notification-resource, name: just_install_packages}` job template that will install the package:
+Into the `worker` job, add the `{release: flowdock-concourse-notification-resource, name: install_flowdock_resource}` job template that will install the package:
 
 ```yaml
 jobs:
 - name: worker
   templates:
     ...
-    - {release: flowdock-concourse-notification-resource, name: just_install_packages}
+    - {release: flowdock-concourse-notification-resource, name: install_flowdock_resource}
 ```
 
 The final change is to explicitly list all the resource types (they are implicit) and add the `flowdock-concourse-notification-resource` package to the list:
