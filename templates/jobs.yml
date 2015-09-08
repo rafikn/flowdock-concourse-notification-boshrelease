@@ -9,9 +9,9 @@ update:
   serial: false
 
 jobs:
-  - name: just_install_packages
+  - name: install_flowdock_resource
     templates:
-    - {name: just_install_packages, release: flowdock-concourse-notification-resource}
+    - {name: install_flowdock_resource, release: flowdock-concourse-notification-resource}
     instances: 1
     persistent_disk: 0
     resource_pool: small_z1

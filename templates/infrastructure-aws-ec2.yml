@@ -9,7 +9,7 @@ meta:
     version: latest
 
 jobs:
-  - name: just_install_packages
+  - name: install_flowdock_resource
     networks:
       - name: flowdock_notification_resource1
     persistent_disk: (( meta.persistent_disk ))
