@@ -13,7 +13,7 @@ jobs:
 license:
   version: 8da6eb3df1dce64b78610e7cbaf4245d66e88f1c
   fingerprint: 8da6eb3df1dce64b78610e7cbaf4245d66e88f1c
-  sha1: 81b235cd15ee829bc48488ed5438ea11f28e5519
+  sha1: 7745d0631bf821c36e3beebab5c831e0d060220e
 commit_hash: 48d82979
 uncommitted_changes: false
 name: flowdock-concourse-notification-resource
