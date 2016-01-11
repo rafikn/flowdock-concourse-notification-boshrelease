@@ -1,0 +1,20 @@
+---
+packages:
+- name: flowdock-concourse-notification-resource
+  version: afc20205f409b28b29bb9581ba999f4cf2bf86a8
+  fingerprint: afc20205f409b28b29bb9581ba999f4cf2bf86a8
+  sha1: 6d99d637d774056751c2b5fb7a02aea695a828d8
+  dependencies: []
+jobs:
+- name: install_flowdock_resource
+  version: 0ad9105610a6e62426cc8fd7d3926282d8890be8
+  fingerprint: 0ad9105610a6e62426cc8fd7d3926282d8890be8
+  sha1: bb81dd03ab004d2f7a14481f6a031812201ed904
+license:
+  version: 8da6eb3df1dce64b78610e7cbaf4245d66e88f1c
+  fingerprint: 8da6eb3df1dce64b78610e7cbaf4245d66e88f1c
+  sha1: 7745d0631bf821c36e3beebab5c831e0d060220e
+commit_hash: c3030ba3
+uncommitted_changes: true
+name: flowdock-concourse-notification-resource
+version: '9'
